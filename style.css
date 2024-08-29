@@ -1,40 +1,71 @@
 body {
     font-family: 'Courier New', Courier, monospace;
     background-color: black;
-    color: #FFD700;
+    color: #2871fa;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     height: 100vh;
     margin: 0;
+    position: relative;
 }
 
 .slot-machine {
     display: flex;
     margin-bottom: 20px;
+    position: relative;
 }
 
 .reel {
     font-size: 5em;
     width: 1.2em;
     text-align: center;
-    border: 3px solid #FFD700;
+    border: 3px solid #6717cd;
     padding: 10px;
     background-color: #333;
-    color: #FFD700;
+    color: #2871fa;
     margin: 0 10px;
     box-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
+}
+
+
+.pointer {
+    position: absolute;
+    left: -60px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 0;
+    border: 20px solid transparent;
+    border-left-color: red;
+}
+
+.squares {
+    position: absolute;
+    right: -80px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.square {
+    width: 20px;
+    height: 20px;
+    background-color: red;
 }
 
 button {
     font-size: 2em;
     padding: 10px 20px;
-    background-color: #FFD700;
-    color: black;
+    background-color: #6717cd;
+    color: white;
     border: none;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    margin-top: 20px; 
 }
 
 button:hover {
